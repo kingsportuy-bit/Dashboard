@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: dashboard-codexa
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard.rule=Host(`dashboard.codexa.uy`)"
+      - "traefik.http.routers.dashboard.entrypoints=websecure"
+      - "traefik.http.routers.dashboard.tls.certresolver=letsencryptresolver"
+      - "traefik.http.services.dashboard.loadbalancer.server.port=80"
+    networks:
+      - oraclelabsnet
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+networks:
+  oraclelabsnet:
+    external: true
