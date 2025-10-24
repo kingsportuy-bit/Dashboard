@@ -1,0 +1,46 @@
+.calendar-tab {
+  padding: 20px;
+  background: transparent;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.calendar-header h3 {
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.calendar-header p {
+  margin: 0 0 20px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.date-selector {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.date-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.date-selector input {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.calendar-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

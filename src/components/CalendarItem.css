@@ -1,0 +1,81 @@
+.calendar-item {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-header h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.item-header p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.item-progress {
+  min-width: 200px;
+}
+
+.progress-edit input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.progress-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.progress-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.check-btn {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.checked-status {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.value-status {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.empty-status {
+  color: #6c757d;
+  font-style: italic;
+}

@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.codexa-x {
+  color: #00CCC2;
+  font-weight: bold;
+}
+
+.footer-link {
+  color: #666;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.footer-link:hover {
+  color: #fff !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
