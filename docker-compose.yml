@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   dashboard:
-    image: dashboard-codexa:latest
+    image: dashboard:latest
     deploy:
       replicas: 1
       labels:
@@ -16,11 +16,12 @@ services:
         condition: on-failure
     networks:
       - codexanet
-  environment:
+    environment:
       - NODE_ENV=production
       - PORT=3000
       - NEXT_PUBLIC_SUPABASE_URL=https://supabasecodexa.codexa.uy
       - NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzE1MDUwODAwLAogICJleHAiOiAxODcyODE3MjAwCn0._7l1lovT1XijXtfVT2hrehUwSATfKL4XNJFbhgmaINM
+
 networks:
   codexanet:
     external: true
