@@ -22,14 +22,14 @@
   z-index: 1;
 }
 
-/* Primer destello naranja oscuro - posición superior izquierda */
+/* Primer destello violeta - posición superior izquierda */
 .sparkle-1 {
   position: absolute;
   top: 10%;
   left: 10%;
   width: 200px;
   height: 200px;
-  background-color: #cc5500; /* Naranja más oscuro */
+  background-color: #4C2882; /* Violeta */
   border-radius: 50%;
   opacity: 0;
   animation: slowSparkle 32s infinite;
@@ -37,14 +37,14 @@
   filter: blur(40px);
 }
 
-/* Segundo destello naranja oscuro - posición inferior derecha */
+/* Segundo destello violeta - posición inferior derecha */
 .sparkle-2 {
   position: absolute;
   bottom: 10%;
   right: 10%;
   width: 300px;
   height: 300px;
-  background-color: #cc5500; /* Naranja más oscuro */
+  background-color: #4C2882; /* Violeta */
   border-radius: 50%;
   opacity: 0;
   animation: slowSparkle 32s infinite 16s;

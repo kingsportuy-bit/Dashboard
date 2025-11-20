@@ -2,18 +2,25 @@ version: '3.8'
 
 services:
   dashboard:
-    build: .
-    container_name: dashboard-codexa
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.dashboard.rule=Host(`dashboard.codexa.uy`)"
-      - "traefik.http.routers.dashboard.entrypoints=websecure"
-      - "traefik.http.routers.dashboard.tls.certresolver=letsencryptresolver"
-      - "traefik.http.services.dashboard.loadbalancer.server.port=80"
+    image: dashboard-codexa:latest
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.dashboard.rule=Host(`dashboard.codexa.uy`)"
+        - "traefik.http.routers.dashboard.entrypoints=websecure"
+        - "traefik.http.routers.dashboard.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.dashboard.loadbalancer.server.port=80"
+        - "traefik.docker.network=codexanet"
+      restart_policy:
+        condition: on-failure
     networks:
-      - oraclelabsnet
-    restart: unless-stopped
-
+      - codexanet
+  environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - NEXT_PUBLIC_SUPABASE_URL=https://supabasecodexa.codexa.uy
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogImFub24iLAogICJpc3MiOiAic3VwYWJhc2UiLAogICJpYXQiOiAxNzE1MDUwODAwLAogICJleHAiOiAxODcyODE3MjAwCn0._7l1lovT1XijXtfVT2hrehUwSATfKL4XNJFbhgmaINM
 networks:
-  oraclelabsnet:
+  codexanet:
     external: true

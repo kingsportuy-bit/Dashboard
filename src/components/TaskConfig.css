@@ -1,32 +1,21 @@
 .task-config {
-  max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .task-config h2 {
-  text-align: center;
-  margin-bottom: 30px;
   color: #ffffff;
-  font-size: 2rem;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
-.task-config h3 {
-  margin-top: 0;
-  color: #ffffff;
-  font-size: 1.5rem;
-}
-
-.card {
+.task-form {
   background: rgba(30, 30, 30, 0.8);
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  margin-bottom: 30px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .form-group {
@@ -36,29 +25,8 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #ff7700;
-  box-shadow: 0 0 0 3px rgba(255, 119, 0, 0.2);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .checkbox-group {
@@ -79,11 +47,11 @@
 .checkbox-label input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #ff7700;
+  accent-color: #6a4f9f;
 }
 
 .add-button {
-  background: linear-gradient(90deg, #cc5500, #ff7700);
+  background: linear-gradient(90deg, #4C2882, #6a4f9f);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -99,7 +67,7 @@
 
 .add-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 119, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(76, 40, 130, 0.3);
 }
 
 .add-button:active {
@@ -135,84 +103,47 @@
   font-size: 0.9rem;
 }
 
-.task-recurrence {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
-.recurrence-badge {
-  background: rgba(255, 119, 0, 0.2);
-  color: #ff7700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.date-range {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8rem;
-}
-
-.custom-days {
-  color: rgba(255, 119, 0, 0.8);
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.remove-button {
-  background: rgba(220, 53, 69, 0.2);
-  color: #dc3545;
-  border: 1px solid rgba(220, 53, 69, 0.3);
-  border-radius: 6px;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.remove-button:hover {
-  background: rgba(220, 53, 69, 0.3);
-}
-
 .config-actions {
   display: flex;
-  justify-content: space-between;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .config-actions button {
   flex: 1;
-  padding: 12px;
+  padding: 12px 20px;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
+  border: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .config-actions .secondary {
   background: transparent;
-  border: 2px solid #ff7700;
-  color: #ff7700;
+  border: 2px solid #6a4f9f;
+  color: #6a4f9f;
 }
 
 .config-actions .secondary:hover {
-  background: rgba(255, 119, 0, 0.1);
+  background: rgba(76, 40, 130, 0.1);
 }
 
 .config-actions .save-button {
-  background: linear-gradient(90deg, #cc5500, #ff7700);
+  background: linear-gradient(90deg, #4C2882, #6a4f9f);
   color: white;
   border: none;
 }
 
 .config-actions .save-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 119, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(76, 40, 130, 0.3);
 }
 
 .config-actions .save-button:active {

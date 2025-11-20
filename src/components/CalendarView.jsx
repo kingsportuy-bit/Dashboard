@@ -51,9 +51,9 @@ const CalendarView = ({ currentDate, setCurrentDate, tasks, progressData, onDayC
     });
     
     if (totalCount === 0) return 'no-tasks';
-    if (completedCount === 0) return 'no-tasks'; // Cambiado de 'pending' a 'no-tasks'
+    if (completedCount === 0) return 'pending';
     if (completedCount === totalCount) return 'completed';
-    return 'partial'; // Cambiado de 'pending' a 'partial' para tareas parcialmente completadas
+    return 'partial';
   };
 
   // Verificar si un día es el día de hoy
@@ -97,13 +97,11 @@ const CalendarView = ({ currentDate, setCurrentDate, tasks, progressData, onDayC
               className={`calendar-day ${status} ${today ? 'today' : ''} ${pastDay ? 'past' : ''}`}
               onClick={() => onDayClick(day)}
             >
-              <div className="day-header">
-                <span className="day-number">{day.getDate()}</span>
-              </div>
+              <div className="day-number">{day.getDate()}</div>
               <div className="day-status">
                 {status === 'completed' && <span className="status-icon">✓</span>}
                 {status === 'partial' && <span className="status-icon">~</span>}
-                {status === 'no-tasks' && <span className="status-icon"></span>}
+                {status === 'pending' && <span className="status-icon">○</span>}
               </div>
             </div>
           );
@@ -115,25 +113,18 @@ const CalendarView = ({ currentDate, setCurrentDate, tasks, progressData, onDayC
   return (
     <div className="calendar-view">
       <div className="calendar-header">
-        <div className="calendar-navigation-left">
-          <button onClick={goToPreviousMonth} className="nav-button">←</button>
-          <button onClick={goToToday} className="nav-button">Hoy</button>
-        </div>
-        <h2>{currentDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}</h2>
-        <div className="calendar-navigation-right">
-          <button onClick={goToNextMonth} className="nav-button">→</button>
-        </div>
+        <button onClick={goToPreviousMonth} className="nav-button">←</button>
+        <h2 className="calendar-title">
+          {currentDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
+        </h2>
+        <button onClick={goToNextMonth} className="nav-button">→</button>
       </div>
       
       <div className="calendar-grid">
-        <div className="weekdays">
-          {getWeekDays().map(day => (
-            <div key={day} className="weekday">{day}</div>
-          ))}
-        </div>
-        <div className="days-grid">
-          {renderCalendarDays()}
-        </div>
+        {getWeekDays().map(day => (
+          <div key={day} className="day-header">{day}</div>
+        ))}
+        {renderCalendarDays()}
       </div>
       
       <div className="legend">
@@ -146,12 +137,12 @@ const CalendarView = ({ currentDate, setCurrentDate, tasks, progressData, onDayC
           <span>Parcial</span>
         </div>
         <div className="legend-item">
-          <div className="legend-color today"></div>
-          <span>Día actual</span>
+          <div className="legend-color pending"></div>
+          <span>Pendiente</span>
         </div>
         <div className="legend-item">
-          <div className="legend-color past"></div>
-          <span>Días pasados</span>
+          <div className="legend-color today"></div>
+          <span>Hoy</span>
         </div>
       </div>
     </div>

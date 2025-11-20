@@ -1,73 +1,53 @@
 .day-detail {
   padding: 20px 0;
-}
-
-.day-detail h2 {
-  text-align: center;
-  margin: 20px 0 30px 0;
-  color: #ffffff;
-  text-transform: capitalize;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .day-header {
-  text-align: center;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
 }
 
 .back-button {
-  background: none;
-  border: none;
-  color: #ff7700;
+  background: transparent;
+  border: 2px solid #6a4f9f;
+  color: #6a4f9f;
+  padding: 8px 15px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 12px 30px;
-  text-align: center;
-  width: auto;
-  margin-bottom: 20px;
   font-weight: 600;
+  font-size: 0.9rem;
   /* Eliminado transition: all 0.3s ease; */
-  border-radius: 30px;
 }
 
 .back-button:hover {
-  background: rgba(255, 119, 0, 0.1);
-  text-decoration: none;
-  /* Eliminado transform: translateY(-2px); */
+  background: rgba(76, 40, 130, 0.1);
+  border-color: #4C2882;
 }
 
-.back-button.secondary {
-  border: 2px solid #ff7700;
-  color: #ff7700;
-}
-
-.card h3 {
-  margin-top: 0;
+.tasks-section h3 {
   color: #ffffff;
-  font-size: 1.5rem;
-}
-
-.no-tasks-message {
-  text-align: center;
-  padding: 40px 20px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.no-tasks-message p {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-.tasks-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
 }
 
 .task-item {
   display: flex;
   align-items: center;
   padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(106, 79, 159, 0.3);
   border-radius: 6px;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.05);
@@ -76,8 +56,8 @@
 }
 
 .task-item:hover {
-  background: rgba(255, 165, 0, 0.1);
-  border-color: rgba(255, 165, 0, 0.3);
+  background: rgba(76, 40, 130, 0.1);
+  border-color: rgba(106, 79, 159, 0.3);
 }
 
 .task-item.completed {
@@ -92,22 +72,22 @@
 .task-checkbox {
   width: 30px;
   height: 30px;
-  border: 2px solid #ff7700;
+  border: 2px solid #6a4f9f;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
   font-weight: bold;
-  color: #ff7700;
+  color: #6a4f9f;
   flex-shrink: 0;
   /* Eliminado transition: all 0.3s ease; */
 }
 
 .task-item.completed .task-checkbox {
-  background: #ff7700;
+  background: #6a4f9f;
   color: #1a1a1a;
-  border-color: #ff7700;
+  border-color: #6a4f9f;
 }
 
 .task-content {

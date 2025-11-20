@@ -7,24 +7,25 @@
   box-sizing: border-box;
 }
 
-.calendar h1 {
-  text-align: center;
-  margin-bottom: 30px;
+.calendar-content {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .view-controls {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   flex-wrap: wrap;
 }
 
 .view-controls button {
   padding: 12px 25px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 2px solid rgba(255, 165, 0, 0.3);
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(106, 79, 159, 0.3);
   border-radius: 30px;
   cursor: pointer;
   /* Eliminado transition: all 0.3s ease; */
@@ -36,22 +37,16 @@
 }
 
 .view-controls button:hover {
-  background: rgba(255, 119, 0, 0.2);
-  border-color: #ff7700;
+  background: rgba(76, 40, 130, 0.2);
+  border-color: #6a4f9f;
   /* Eliminado transform: translateY(-2px); */
 }
 
 .view-controls button.active {
-  background: linear-gradient(90deg, #cc5500, #ff7700);
-  border-color: #ff7700;
+  background: linear-gradient(90deg, #4C2882, #6a4f9f);
+  border-color: #6a4f9f;
   color: white;
   /* Eliminado box-shadow: 0 4px 15px rgba(255, 119, 0, 0.3); */
-}
-
-.calendar-content {
-  flex: 1;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .loading {
